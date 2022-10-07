@@ -39,10 +39,10 @@ Team member 2 should pull to download updates and begins here.
 ```{r staff-long-create}
 # uncomment and edit the code below
 #staff_long <- ___ %>%
-#  ___(
-#    cols = ___, 
-#    names_to = "___",
-#    values_to = "___"
+#  pivot_longer(
+#    cols, 
+#    names_to = "faculty_type",
+#    values_to = "year"
 #    )
 ```
 
