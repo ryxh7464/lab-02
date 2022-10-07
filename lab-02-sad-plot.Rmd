@@ -1,6 +1,6 @@
 ---
 title: "Lab 02 - Take a sad plot and make it better"
-author: "Group Members: Ryan Hall, Zhihong Chen, Eddie Washbrook and user4"
+author: "Group Members: Ryan Hall, Zhihong Chen, Eddie Washbrook, Chenyi He and user5"
 date: "`r Sys.Date()`"
 output: html_document
 ---
