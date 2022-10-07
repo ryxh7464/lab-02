@@ -49,10 +49,12 @@ i guess it's correct
 
 ### Exercise 3
 
-*Remove this text and add your answer here.*
-
+`
+```
 ```{r staff-long-inspect}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
+  geom_line()
 ```
 
 
