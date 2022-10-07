@@ -45,7 +45,7 @@ staff_long <- staff %>%
     values_to = "value"
     )
 ```
-
+i guess it's correct
 
 ### Exercise 3
 
