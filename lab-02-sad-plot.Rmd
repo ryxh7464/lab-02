@@ -15,20 +15,11 @@ library(tidyverse)
 staff <- read_csv("data/instructional-staff.csv")
 ```
 
-
 --------
-
-
-
-
-
 
 ### Exercise 1
 
 If there is a row for each year/faculty type combination and there are 5 faculty types and 11 years of data, then there will be 55 different combinations of faculty type and year and so there will be 55 rows.
-
-
-
 
 --------
 
@@ -37,7 +28,6 @@ Team member 2 should pull to download updates and begins here.
 ### Exercise 2
 
 ```{r staff-long-create}
-# uncomment and edit the code below
 staff_long <- staff %>%
   pivot_longer(
     cols = -faculty_type, 
@@ -45,18 +35,12 @@ staff_long <- staff %>%
     values_to = "value"
     )
 ```
-i guess it's correct
 
 ### Exercise 3
 
-`
-```
 ```{r staff-long-inspect}
-staff_long %>%
-  ggplot(aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
-  geom_line()
+staff_long
 ```
-
 
 Team member 2 should knit, stage & commit, and push all changes to GitHub.
 
@@ -64,24 +48,21 @@ Team member 2 should knit, stage & commit, and push all changes to GitHub.
 
 Team member 3 should pull to download updates and begins here.
 
-
 ### Exercise 4
 
-*Remove this text and add your answer here.*
-
 ```{r lineplot-1}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = year, y = value, color = faculty_type)) +
+  geom_line()
 ```
-
 
 ### Exercise 5
 
-*Remove this text and add your answer here.*
-
 ```{r lineplot-2}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
+  geom_line()
 ```
-
 
 Team member 3 should knit, stage & commit, and push all changes to GitHub.
 
@@ -92,12 +73,14 @@ Next team member should pull to download updates and continue from here.
 
 ### Exercise 6
 
-*Remove this text and add your answer here.*
-
 ```{r lineplot-3}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(mapping = aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
+  geom_line()
+  labs(y = "Percent of Total Instructional Staff",
+       x = "year",
+       title = "Trends in Instructional Staff Employment Status")
 ```
-
 
 Current team member should knit, stage & commit, and push all changes to GitHub.
 
