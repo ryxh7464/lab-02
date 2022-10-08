@@ -58,6 +58,8 @@ staff_long %>%
 
 ### Exercise 5
 
+Instructional staff employment in part-time and full-time non-tenure-track faculty had a large increase while in all the other faculties, it went decreasing trends.
+
 ```{r lineplot-2}
 staff_long %>%
   ggplot(aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
@@ -70,16 +72,17 @@ Team member 3 should knit, stage & commit, and push all changes to GitHub.
 
 Next team member should pull to download updates and continue from here.
 
-
 ### Exercise 6
 
 ```{r lineplot-3}
 staff_long %>%
-  ggplot(mapping = aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
-  geom_line()
-  labs(y = "Percent of Total Instructional Staff",
-       x = "year",
-       title = "Trends in Instructional Staff Employment Status")
+  ggplot(aes(x = year, y = value, color = faculty_type, group = faculty_type)) +
+  geom_line() +
+  labs(
+  y = "Percent of Total Instructional Staff",
+  x = "year",
+  title = "Trends in Instructional Staff Employment Status"
+  )
 ```
 
 Current team member should knit, stage & commit, and push all changes to GitHub.
